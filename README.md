@@ -1,2 +1,2 @@
 # NumberGuessingGame
-Created a number guessing game that generates a random number between 0 and 128 and keeps asking the user to guess the number until the user guesses it correctly
+Created a number guessing game that generates a random number between 0 and 128 and keeps asking the user to guess the number until the user guesses it correctly. After the user correctly guesses the number, a leaderboard is shown so that the user can compete against other users who have also played the game. The game also keeps track of the number of guesses and converts these into points which are also shown in the leaderboard next to the users name.
