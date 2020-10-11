@@ -1,0 +1,67 @@
+#!/bin/bash
+
+
+
+function game {
+x=$(((RANDOM % 128)+(0)))
+
+ echo "Enter name:"
+read name
+  echo " Guess a number between 0 and 128"
+ read num
+
+ while [ $num -ne $x ]; do
+	 if [ $num -gt $x ];
+        then
+		
+                echo "High Guess"
+	       let counter=counter+1
+
+	 echo " Guess a number between 0 and 128"
+	 read num
+
+	 else 
+		
+		echo "Low Guess "
+		let counter=counter+1
+		
+	       	echo "Guess a number between 0 and 128"
+	 	read num
+
+		
+	fi
+done
+
+play
+
+}
+
+
+function play {
+        if [ $num -eq $x ];
+        then
+		echo "$name $counter" >> record.txt
+		results;
+	fi }
+
+function results {
+	
+    # sort -o record.txt output.txt  
+    sort -n record.txt  -t " " -k 2 
+   # head -3 record.txt
+	exit
+}
+
+
+#this was supposed to ge the first three lines of 
+#function three {
+#	 head -3 record.txt
+#       exit
+
+#}
+
+touch record.txt
+
+game
+
+
