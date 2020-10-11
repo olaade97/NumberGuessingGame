@@ -46,19 +46,14 @@ function play {
 
 function results {
 	
-    # sort -o record.txt output.txt  
+
     sort -n record.txt  -t " " -k 2 
-   # head -3 record.txt
+
 	exit
 }
 
 
-#this was supposed to ge the first three lines of 
-#function three {
-#	 head -3 record.txt
-#       exit
 
-#}
 
 touch record.txt
 
